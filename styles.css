@@ -1,0 +1,27 @@
+body{
+    background-color: gray;
+}
+.wrapper {
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: lightslategray;
+    max-width: 60%;
+    min-width: 450px;
+    min-height: 900px;
+}
+.results{
+    font-size: x-large;
+}
+label{
+    font-size: large;
+}
+input {
+    margin: 10px;
+}
+input[type=text]{
+    font-size: large;
+}
+input[type=submit]{
+    font-size: large;
+}
