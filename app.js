@@ -4,6 +4,24 @@ const results = document.querySelector('.results');
 const tableInput = document.querySelector('#tableInput');
 const chairInput = document.querySelector('#chairInput');
 
+const chairMath = (chairs, tables) => {
+    console.log('in chairmath')
+    const remainder = chairs % 3;
+    console.log(remainder)
+    let three = 0; ;
+    if(remainder === 1){
+        const temp = chairs - remainder;
+        three = (temp / 3) - 1;
+    } else {
+        console.log('run 2 remainder')
+        const temp = chairs - remainder;
+        three = temp / 3;
+    }
+    const two = tables - three;
+    const html =`<p>${three} tables of 3 and ${two} tables of 2</p>`
+    results.innerHTML = html;
+};
+
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -18,7 +36,7 @@ form.addEventListener('submit', e => {
             const html = '<p>3 Chairs per Table</p>';
             results.innerHTML = html;
         } else {
-
+            chairMath(ChairAmount, tableAmount);
         }
     }
 
